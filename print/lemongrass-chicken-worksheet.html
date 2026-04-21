@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lemongrass Chicken & Rice Noodle Salad · JuniorChef Worksheet · Ages 9–12</title>
+<link rel="stylesheet" href="../../project/colors_and_type.css">
+<style>
+  html, body { margin: 0; background: #2a2620; }
+  body { display: flex; flex-direction: column; align-items: center; gap: 28px; padding: 40px 0; }
+
+  .no-print {
+    position: fixed; top: 20px; right: 20px; z-index: 999;
+    background: var(--jc-red); color: #fff;
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 10px 20px; border-radius: 999px;
+    border: 2.5px solid var(--ink);
+    box-shadow: 0 4px 0 var(--ink);
+    cursor: pointer; text-decoration: none;
+  }
+  .no-print:hover { background: var(--jc-red-deep); }
+  @media print { .no-print { display: none; } }
+
+  .page {
+    width: 1400px; height: 990px;
+    background: var(--paper);
+    box-shadow: 0 12px 48px rgba(0,0,0,0.35);
+    position: relative;
+    overflow: hidden;
+    padding: 44px 52px 52px;
+    display: grid;
+  }
+
+  /* -------- Shared chrome -------- */
+  .header {
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 3px solid var(--ink);
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+  }
+  .header img { height: 72px; }
+  .header .meta {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .header .meta .recipe {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--jc-red);
+  }
+  .ages-pill {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+    background: var(--jc-yellow); color: var(--ink);
+    padding: 6px 14px; border-radius: 999px;
+    border: 2.5px solid var(--ink);
+  }
+  .page-num {
+    font-family: var(--font-mono); font-size: 12px; color: var(--ink-muted);
+  }
+
+  /* Card primitive */
+  .card {
+    background: var(--paper);
+    border: 2.5px solid var(--ink);
+    border-radius: 20px;
+    padding: 18px 22px 18px 40px;
+    box-shadow: 0 5px 0 var(--ink);
+    position: relative;
+  }
+  .card.cream { background: var(--paper-warm); }
+  .card.cool  { background: var(--paper-cool); }
+  .card h4 {
+    font-family: var(--font-display); font-weight: 600;
+    font-size: 22px; text-transform: uppercase; color: var(--ink);
+    margin: 0 0 4px; line-height: 1.05; letter-spacing: -0.005em;
+  }
+  .card .hint {
+    font-family: var(--font-body); font-weight: 600; font-size: 13px;
+    color: var(--ink-soft); margin-bottom: 10px;
+  }
+  .card .num-chip {
+    position: absolute; top: -16px; left: -18px;
+    width: 44px; height: 44px; border-radius: 999px;
+    background: var(--jc-red); color: #fff;
+    border: 2.5px solid var(--ink);
+    font-family: var(--font-display); font-weight: 700; font-size: 22px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 3px 0 var(--ink);
+    z-index: 2;
+  }
+  .num-chip.teal   { background: var(--jc-teal); }
+  .num-chip.orange { background: var(--jc-orange); }
+  .num-chip.yellow { background: var(--jc-yellow); color: var(--ink); }
+
+  /* -------- PAGE 1 layout -------- */
+  .p1 {
+    grid-template-columns: 1.1fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 18px 20px;
+  }
+  .p1 .header { grid-column: 1/-1; }
+  .title-block { grid-column: 1/-1; display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 24px; margin-bottom: 6px; }
+  .worksheet-title {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 64px; line-height: 0.95; text-transform: uppercase;
+    letter-spacing: -0.015em; color: var(--ink);
+    margin: 0;
+  }
+  .worksheet-title .teal { color: var(--jc-teal); }
+  .worksheet-title .red  { color: var(--jc-red); }
+  .eyebrow-note {
+    font-family: var(--font-body); font-size: 15px; color: var(--ink-soft);
+    max-width: 440px; line-height: 1.4;
+  }
+  .hero-stamp {
+    width: 180px; height: 180px; border-radius: 20px;
+    border: 3px solid var(--ink); box-shadow: 0 6px 0 var(--ink);
+    overflow: hidden; transform: rotate(-3deg);
+  }
+  .hero-stamp img { width: 100%; height: 100%; object-fit: cover; }
+
+  .col { display: flex; flex-direction: column; gap: 20px; height: 100%; }
+  .col > .card:last-child { margin-bottom: 0; }
+  .p1 > .col, .p2 > .col { min-height: 0; }
+
+  /* Vocab matching */
+  .vocab { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 30px; align-items: center; }
+  .vocab .word {
+    font-family: var(--font-display); font-weight: 600;
+    font-size: 20px; text-transform: uppercase; color: var(--ink);
+    padding: 6px 12px; background: var(--jc-red-tint); border-radius: 10px;
+    border: 2px solid var(--ink);
+    text-align: center;
+  }
+  .vocab .word.t2 { background: var(--jc-teal-tint); }
+  .vocab .word.t3 { background: var(--jc-orange-tint); }
+  .vocab .word.t4 { background: var(--jc-yellow-tint); }
+  .vocab .word.t5 { background: var(--paper-warm); }
+  .vocab .def {
+    font-family: var(--font-body); font-size: 15px; color: var(--ink);
+    line-height: 1.4; padding: 4px 0;
+    border-bottom: 2px dotted var(--ink-muted);
+  }
+
+  /* Fill-in */
+  .fill { font-family: var(--font-body); font-size: 16px; line-height: 1.85; color: var(--ink); }
+  .blank { display: inline-block; min-width: 110px; border-bottom: 2.5px solid var(--ink); margin: 0 4px; height: 18px; vertical-align: baseline; }
+  .wordbank {
+    margin-top: 12px;
+    font-family: var(--font-body); font-weight: 800; font-size: 12px;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted);
+  }
+  .wordbank-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+  .wordbank-list span {
+    font-family: var(--font-body); font-weight: 800; font-size: 13px;
+    letter-spacing: 0.04em; text-transform: none;
+    background: var(--paper-cool); border: 2px solid var(--ink);
+    padding: 4px 10px; border-radius: 8px;
+    color: var(--ink);
+  }
+
+  /* Origins map */
+  .origins { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: center; }
+  .map-wrap {
+    width: 280px; height: 180px;
+    background: var(--paper-cool);
+    border: 2.5px solid var(--ink); border-radius: 14px;
+    position: relative; overflow: hidden;
+  }
+  .map-wrap svg { width: 100%; height: 100%; display: block; }
+  .pin {
+    position: absolute; width: 26px; height: 26px;
+    background: var(--jc-red); border: 2.5px solid var(--ink);
+    border-radius: 999px; box-shadow: 0 3px 0 var(--ink);
+    transform: translate(-50%, -100%);
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-family: var(--font-display); font-weight: 700; font-size: 14px;
+  }
+  .origins .fact { font-family: var(--font-body); font-size: 15px; color: var(--ink); line-height: 1.45; }
+  .origins .fact b { font-family: var(--font-display); font-weight: 600; text-transform: uppercase; color: var(--jc-red); font-size: 18px; display: block; margin-bottom: 4px; }
+
+  /* -------- PAGE 2 layout -------- */
+  .p2 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 18px 20px;
+  }
+  .p2 .header { grid-column: 1/-1; }
+  .p2-intro { grid-column: 1/-1; display: flex; align-items: baseline; justify-content: space-between; gap: 20px; margin-bottom: 4px; }
+  .p2-intro h2 {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 48px; line-height: 0.95; text-transform: uppercase;
+    letter-spacing: -0.01em; margin: 0;
+  }
+  .p2-intro h2 .or { color: var(--jc-orange); }
+  .p2-intro p { font-family: var(--font-body); font-size: 14px; color: var(--ink-soft); max-width: 400px; margin: 0; line-height: 1.4; }
+
+  /* Scale recipe table */
+  table.scale {
+    width: 100%; border-collapse: collapse;
+    font-family: var(--font-body); font-size: 15px;
+  }
+  table.scale th {
+    font-family: var(--font-display); font-weight: 600;
+    font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase;
+    text-align: left; padding: 6px 8px;
+    background: var(--jc-teal); color: #fff;
+    border: 2.5px solid var(--ink);
+  }
+  table.scale th:nth-child(2) { background: var(--jc-yellow); color: var(--ink); }
+  table.scale th:nth-child(3) { background: var(--jc-red); color: #fff; }
+  table.scale td {
+    padding: 8px 10px;
+    border: 2px solid var(--ink);
+    font-weight: 700;
+  }
+  table.scale td.blank-cell {
+    background: repeating-linear-gradient(135deg, transparent 0 8px, #F0E4C8 8px 9px);
+    min-width: 80px;
+  }
+
+  /* Senses grid */
+  .senses { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .sense {
+    border: 2.5px dashed var(--ink); border-radius: 14px;
+    padding: 10px 12px;
+    min-height: 70px;
+    display: flex; flex-direction: column; gap: 2px;
+  }
+  .sense .label {
+    font-family: var(--font-body); font-weight: 800; font-size: 11px;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--jc-red);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .sense .label .ic { width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; color: var(--jc-red); }
+
+  /* Design-your-own: blank plate */
+  .plate-wrap { display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: center; }
+  .plate {
+    width: 220px; height: 220px; border-radius: 999px;
+    background: var(--paper);
+    border: 3px solid var(--ink);
+    box-shadow: 0 6px 0 var(--ink);
+    position: relative;
+  }
+  .plate::after {
+    content: ''; position: absolute; inset: 16px;
+    border: 2px dashed var(--ink-muted); border-radius: 999px;
+  }
+  .plate-label {
+    position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%);
+    background: var(--jc-yellow); color: var(--ink);
+    font-family: var(--font-display); font-weight: 600;
+    font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 4px 12px; border-radius: 999px; border: 2.5px solid var(--ink);
+  }
+  .swap {
+    font-family: var(--font-body); font-size: 14.5px; line-height: 1.5; color: var(--ink);
+  }
+  .swap .ask {
+    font-family: var(--font-display); font-weight: 600;
+    font-size: 18px; text-transform: uppercase; color: var(--jc-orange);
+    margin-bottom: 6px;
+  }
+  .writing-lines { margin-top: 8px; }
+  .writing-lines div {
+    height: 20px; border-bottom: 2px solid var(--ink-muted);
+    margin-bottom: 8px;
+  }
+
+  .footer-bar {
+    grid-column: 1 / -1;
+    margin-top: 0;
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+</style>
+</head>
+<body>
+
+<button class="no-print" onclick="window.print()">Print Worksheet</button>
+
+<!-- ============ PAGE 1 ============ -->
+<div class="page p1">
+
+  <div class="header">
+    <img src="../../project/assets/logo/juniorchef-logo.png" alt="JuniorChef Saigon">
+    <div class="meta">
+      <span class="recipe">Recipe · Lemongrass Chicken &amp; Rice Noodle Salad</span>
+      <span class="ages-pill">Ages 9–12</span>
+    </div>
+  </div>
+
+  <div class="title-block">
+    <div>
+      <h1 class="worksheet-title">Read &amp; Understand<br><span class="teal">Lemongrass!</span></h1>
+      <div class="eyebrow-note" style="margin-top:10px">Three challenges before you cook. The third one might surprise you!</div>
+    </div>
+    <div class="hero-stamp"><img src="../../project/assets/photos/lemongrass-chicken-salad.png" alt="Lemongrass Chicken & Rice Noodle Salad"></div>
+  </div>
+
+  <div class="col">
+    <div class="card">
+      <div class="num-chip">1</div>
+      <h4>Match the Word to What It Means</h4>
+      <div class="hint">Draw a line from each kitchen word to its meaning.</div>
+      <div class="vocab">
+        <div class="word">Marinade</div>      <div class="def">A wet mix of acids and flavour that soaks into the meat</div>
+        <div class="word t2">Nuoc Cham</div>  <div class="def">Vietnam's all-purpose dipping and dressing sauce</div>
+        <div class="word t3">Julienne</div>   <div class="def">To cut vegetables into thin matchstick strips</div>
+        <div class="word t4">Bruise</div>     <div class="def">To lightly crush an ingredient to release its oils</div>
+        <div class="word t5">Vermicelli</div> <div class="def">Very thin rice noodles used in Vietnamese salads</div>
+      </div>
+    </div>
+
+    <div class="card cool">
+      <div class="num-chip teal">2</div>
+      <h4>Fill in the Blanks</h4>
+      <div class="hint">Use the word bank. One word is a trick — you won't need it.</div>
+      <div class="fill">
+        To make nuoc cham, combine <span class="blank"></span> sauce, lime <span class="blank"></span>,
+        and sugar in a jar. Taste it — it should be <span class="blank"></span>, salty, sweet, and
+        a little <span class="blank"></span> all at once. The lemongrass must be <span class="blank"></span>
+        with the back of your knife before slicing — this releases ten times more flavour.
+      </div>
+      <div class="wordbank">Word bank</div>
+      <div class="wordbank-list">
+        <span>fish</span><span>juice</span><span>spicy</span><span>sour</span><span>bruised</span><span>boiled</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card cream">
+      <div class="num-chip orange">3</div>
+      <h4>Where Does It Come From?</h4>
+      <div class="hint">This dish comes from a country in South East Asia. Can you name it?</div>
+      <div class="origins">
+        <div class="map-wrap">
+          <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
+            <!-- ocean -->
+            <rect width="400" height="260" fill="#F0F7F4"/>
+            <!-- rough Asia/SE Asia landmass (simplified) -->
+            <path fill="#C0E4DE" stroke="#1F1A14" stroke-width="2" stroke-linejoin="round" d="M100,20 L180,15 L260,30 L320,50 L350,80 L345,120 L330,150 L300,165 L275,180 L250,175 L235,195 L215,200 L200,185 L185,195 L170,200 L160,185 L150,190 L140,180 L130,175 L115,165 L100,140 L85,120 L80,90 L85,55 Z"/>
+            <!-- Indochina peninsula -->
+            <path fill="#C0E4DE" stroke="#1F1A14" stroke-width="1.5" stroke-linejoin="round" d="M200,150 L220,145 L240,155 L250,175 L245,195 L235,210 L220,220 L205,215 L195,205 L190,190 L195,170 Z"/>
+            <!-- Additional islands hint -->
+            <ellipse cx="270" cy="210" rx="25" ry="12" fill="#C0E4DE" stroke="#1F1A14" stroke-width="1.5"/>
+          </svg>
+          <!-- Pin over Vietnam -->
+          <div class="pin" style="left:55%;top:58%">★</div>
+        </div>
+        <div class="fact">
+          <b>Country?</b>
+          <div class="writing-lines" style="width:180px"><div></div></div>
+          <div style="margin-top:10px;font-size:13px;color:var(--ink-soft)">Vietnam sits at a crossroads of South East Asia — lemongrass, fish sauce, and fresh herbs are the three building blocks of its cuisine.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="num-chip yellow">4</div>
+      <h4>True or False?</h4>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px">
+        <div style="display:flex;gap:10px;align-items:center;font-family:var(--font-body);font-size:15px">
+          <span style="width:28px;height:28px;border:2.5px solid var(--ink);border-radius:8px;display:inline-block;flex-shrink:0"></span>
+          You should slice lemongrass straight away without bruising it first.
+          <span class="mono" style="margin-left:auto;color:var(--ink-muted)">T / F</span>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;font-family:var(--font-body);font-size:15px">
+          <span style="width:28px;height:28px;border:2.5px solid var(--ink);border-radius:8px;display:inline-block;flex-shrink:0"></span>
+          Nuoc cham dressing should taste like just one flavour.
+          <span class="mono" style="margin-left:auto;color:var(--ink-muted)">T / F</span>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;font-family:var(--font-body);font-size:15px">
+          <span style="width:28px;height:28px;border:2.5px solid var(--ink);border-radius:8px;display:inline-block;flex-shrink:0"></span>
+          You check chicken is cooked by slicing the thickest piece.
+          <span class="mono" style="margin-left:auto;color:var(--ink-muted)">T / F</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <span>JuniorChef Saigon · Worksheet</span>
+    <span class="page-num">01 / 02</span>
+  </div>
+</div>
+
+<!-- ============ PAGE 2 ============ -->
+<div class="page p2">
+
+  <div class="header">
+    <img src="../../project/assets/logo/juniorchef-logo.png" alt="JuniorChef Saigon">
+    <div class="meta">
+      <span class="recipe">Recipe · Lemongrass Chicken &amp; Rice Noodle Salad</span>
+      <span class="ages-pill">Ages 9–12</span>
+    </div>
+  </div>
+
+  <div class="p2-intro">
+    <h2>Think &amp; <span class="or">Create</span></h2>
+    <p>Now the fun part. Use what you know about this dish to solve, taste, and invent.</p>
+  </div>
+
+  <div class="col">
+    <div class="card">
+      <div class="num-chip">5</div>
+      <h4>Scale the Recipe</h4>
+      <div class="hint">The nuoc cham makes enough for 4. Scale it up for a class of 10 — multiply each amount by <b>2.5</b>.</div>
+      <table class="scale">
+        <thead><tr><th>Ingredient</th><th>For 4</th><th>For 10</th></tr></thead>
+        <tbody>
+          <tr><td>Fish sauce</td><td>3 tbsp</td><td class="blank-cell"></td></tr>
+          <tr><td>Lime juice</td><td>2 tbsp</td><td class="blank-cell"></td></tr>
+          <tr><td>Sugar</td><td>1 tbsp</td><td class="blank-cell"></td></tr>
+          <tr><td>Water</td><td>4 tbsp</td><td class="blank-cell"></td></tr>
+          <tr><td>Garlic</td><td>1 clove</td><td class="blank-cell"></td></tr>
+        </tbody>
+      </table>
+      <div class="hint" style="margin-top:10px;margin-bottom:0">Hint: 3 × 2.5 = 3 + 3 + 1.5 = ?</div>
+    </div>
+
+    <div class="card cool">
+      <div class="num-chip teal">6</div>
+      <h4>Use Your Senses</h4>
+      <div class="hint">When the chicken comes off the pan, describe what you notice in each square.</div>
+      <div class="senses">
+        <div class="sense"><div class="label"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span>Looks like</div></div>
+        <div class="sense"><div class="label"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 2 5 6 5 10c0 4 3 7 7 7s7-3 7-7c0-4-3-8-7-8z"/><path d="M9 19v2M15 19v2"/></svg></span>Smells like</div></div>
+        <div class="sense"><div class="label"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M6 8c0 3 2 5 6 5s6-2 6-5"/></svg></span>Tastes like</div></div>
+        <div class="sense"><div class="label"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14c0-4 3-8 8-8s8 4 8 8M8 18c0-2 1-4 4-4s4 2 4 4"/></svg></span>Sounds like (in the pan)</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card cream">
+      <div class="num-chip orange">7</div>
+      <h4>Design Your Bowl</h4>
+      <div class="hint">Sketch how you'd build your salad bowl. Layer by layer.</div>
+      <div class="plate-wrap">
+        <div class="plate"><div class="plate-label">Your bowl</div></div>
+        <div style="font-family:var(--font-body);font-size:13px;color:var(--ink-soft);line-height:1.5">
+          <b style="font-family:var(--font-display);font-weight:600;font-size:15px;color:var(--jc-teal);text-transform:uppercase;letter-spacing:0.04em">Plating tips</b><br>
+          Noodles as the base.<br>
+          Colours next to colours.<br>
+          Herbs on top.<br>
+          Drizzle last.
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="num-chip yellow">8</div>
+      <h4>Swap One Ingredient</h4>
+      <div class="swap">
+        <div class="ask">What would you change, and why?</div>
+        If you couldn't get chicken today, what protein would work in this marinade? Think about what absorbs flavour well.
+        <div class="writing-lines">
+          <div></div><div></div><div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <span>JuniorChef Saigon · Worksheet</span>
+    <span class="page-num">02 / 02</span>
+  </div>
+</div>
+
+</body>
+</html>

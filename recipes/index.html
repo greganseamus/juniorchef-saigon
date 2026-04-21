@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All Recipes — JuniorChef Saigon</title>
+<meta name="description" content="Free printable recipe sheets and worksheets for kids ages 6–12. World recipes from Vietnam, Korea, Italy, Russia, and more.">
+<link rel="stylesheet" href="../site.css">
+<style>
+  .filters {
+    display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px;
+  }
+  .filter-btn {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 8px 16px; border-radius: var(--radius-pill);
+    border: 2px solid var(--ink); background: transparent; color: var(--ink);
+    cursor: pointer; transition: background 0.15s, color 0.15s;
+  }
+  .filter-btn:hover, .filter-btn.active { background: var(--ink); color: #fff; }
+  .worksheet-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .ws-card {
+    background: var(--paper-cool);
+    border: 2.5px solid var(--ink); border-radius: var(--radius-lg);
+    overflow: hidden; box-shadow: 0 5px 0 var(--ink);
+    text-decoration: none; color: inherit;
+    transition: transform 0.18s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.18s;
+    display: grid; grid-template-columns: auto 1fr;
+  }
+  .ws-card:hover { transform: translateY(-4px); box-shadow: 0 9px 0 var(--ink); }
+  .ws-card .ws-color {
+    width: 8px; background: var(--jc-teal);
+  }
+  .ws-card .ws-info { padding: 20px 22px; }
+  .ws-card .ages {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    background: var(--jc-yellow); color: var(--ink);
+    padding: 4px 10px; border-radius: 999px; border: 2px solid var(--ink);
+    display: inline-block; margin-bottom: 10px;
+  }
+  .ws-card h3 {
+    font-family: var(--font-display); font-weight: 600;
+    font-size: var(--fs-xl); text-transform: uppercase; color: var(--ink);
+    margin: 0 0 6px; line-height: 1.1;
+  }
+  .ws-card p {
+    font-family: var(--font-body); font-size: var(--fs-sm);
+    color: var(--ink-soft); margin: 0 0 14px; line-height: 1.5;
+  }
+  .ws-card .dl-link {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--jc-teal-deep); text-decoration: none;
+    display: inline-flex; align-items: center; gap: 4px;
+  }
+  .ws-card .dl-link:hover { color: var(--jc-teal); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <a class="logo" href="../index.html"><img src="../project/assets/logo/juniorchef-logo.png" alt="JuniorChef Saigon"></a>
+  <ul class="nav-links">
+    <li><a href="../recipes/index.html" class="active">Recipes</a></li>
+    <li><a href="#worksheets">Worksheets</a></li>
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#free-downloads" class="nav-cta">Free Downloads</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HEADER -->
+<div style="background:var(--paper-warm);border-bottom:2.5px solid var(--ink);padding:clamp(36px,5vw,72px) clamp(20px,5vw,80px)">
+  <div class="container" style="padding:0">
+    <div style="font-family:var(--font-body);font-weight:800;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--jc-red);margin-bottom:12px">Free Downloads</div>
+    <h1 style="font-family:var(--font-display);font-weight:700;font-size:clamp(36px,5vw,64px);line-height:0.95;text-transform:uppercase;letter-spacing:-0.015em;color:var(--ink);margin:0 0 16px">All Recipes</h1>
+    <p style="font-family:var(--font-body);font-size:var(--fs-lg);color:var(--ink-soft);margin:0;max-width:560px;line-height:1.5">
+      Five world recipes, free to download and print. Each comes with a full recipe sheet (ages 6–12) and a worksheet (ages 9–12) with kitchen vocabulary, maths, and hands-on challenges.
+    </p>
+  </div>
+</div>
+
+<!-- RECIPE SHEETS SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Recipe Sheets</h2>
+    </div>
+    <div class="filters">
+      <button class="filter-btn active">All</button>
+      <button class="filter-btn">Vietnamese</button>
+      <button class="filter-btn">Korean</button>
+      <button class="filter-btn">Italian</button>
+      <button class="filter-btn">Russian</button>
+      <button class="filter-btn">Summer</button>
+    </div>
+    <div class="recipe-grid">
+
+      <a class="recipe-card" href="summer-berry-shortcakes.html">
+        <div class="photo"><img src="../project/assets/photos/summer-berry-shortcakes.png" alt="Summer Berry Shortcakes"></div>
+        <div class="info">
+          <div class="tag">Summer · Garden</div>
+          <h3>Summer Berry Shortcakes</h3>
+          <p class="small">Ages 6–12 · For 4 · 45 min</p>
+          <div class="dl-pill">
+            <a href="../print/summer-berry-shortcakes-sheet.html" class="sheet" onclick="event.stopPropagation()">Recipe Sheet</a>
+            <a href="../print/summer-berry-shortcakes-worksheet.html" class="worksheet" onclick="event.stopPropagation()">Worksheet</a>
+          </div>
+        </div>
+      </a>
+
+      <a class="recipe-card" href="lemongrass-chicken-salad.html">
+        <div class="photo"><img src="../project/assets/photos/lemongrass-chicken-salad.png" alt="Lemongrass Chicken Salad"></div>
+        <div class="info">
+          <div class="tag">Vietnamese · Fresh</div>
+          <h3>Lemongrass Chicken &amp; Rice Noodle Salad</h3>
+          <p class="small">Ages 6–12 · For 4 · 40 min</p>
+          <div class="dl-pill">
+            <a href="../print/lemongrass-chicken-sheet.html" class="sheet" onclick="event.stopPropagation()">Recipe Sheet</a>
+            <a href="../print/lemongrass-chicken-worksheet.html" class="worksheet" onclick="event.stopPropagation()">Worksheet</a>
+          </div>
+        </div>
+      </a>
+
+      <a class="recipe-card" href="korean-beef-bulgogi-skewers.html">
+        <div class="photo"><img src="../project/assets/photos/korean-beef-bulgogi-skewers.png" alt="Korean Beef Bulgogi Skewers"></div>
+        <div class="info">
+          <div class="tag">Korean · BBQ</div>
+          <h3>Korean Beef Bulgogi Skewers</h3>
+          <p class="small">Ages 6–12 · For 4 · 50 min</p>
+          <div class="dl-pill">
+            <a href="../print/korean-beef-bulgogi-sheet.html" class="sheet" onclick="event.stopPropagation()">Recipe Sheet</a>
+            <a href="../print/korean-beef-bulgogi-worksheet.html" class="worksheet" onclick="event.stopPropagation()">Worksheet</a>
+          </div>
+        </div>
+      </a>
+
+      <a class="recipe-card" href="chicken-stroganoff.html">
+        <div class="photo"><img src="../project/assets/photos/chicken-stroganoff.png" alt="Chicken Stroganoff"></div>
+        <div class="info">
+          <div class="tag">Russian · Comfort</div>
+          <h3>Chicken Stroganoff</h3>
+          <p class="small">Ages 6–12 · For 4 · 40 min</p>
+          <div class="dl-pill">
+            <a href="../print/chicken-stroganoff-sheet.html" class="sheet" onclick="event.stopPropagation()">Recipe Sheet</a>
+            <a href="../print/chicken-stroganoff-worksheet.html" class="worksheet" onclick="event.stopPropagation()">Worksheet</a>
+          </div>
+        </div>
+      </a>
+
+      <a class="recipe-card" href="lentil-bolognese.html">
+        <div class="photo"><img src="../project/assets/photos/lentil-bolognese.png" alt="Lentil Bolognese"></div>
+        <div class="info">
+          <div class="tag">Italian · Vegetarian</div>
+          <h3>Lentil Bolognese</h3>
+          <p class="small">Ages 6–12 · For 4 · 45 min</p>
+          <div class="dl-pill">
+            <a href="../print/lentil-bolognese-sheet.html" class="sheet" onclick="event.stopPropagation()">Recipe Sheet</a>
+            <a href="../print/lentil-bolognese-worksheet.html" class="worksheet" onclick="event.stopPropagation()">Worksheet</a>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- WORKSHEETS SECTION -->
+<section class="section" id="worksheets">
+  <div class="container">
+    <div class="section-head">
+      <h2>Worksheets <span style="font-size:0.55em;color:var(--jc-teal);background:var(--jc-teal-tint);padding:4px 14px;border-radius:999px;border:2px solid var(--jc-teal);vertical-align:middle;letter-spacing:0.1em">Ages 9–12</span></h2>
+    </div>
+    <p style="font-family:var(--font-body);font-size:var(--fs-md);color:var(--ink-soft);margin:0 0 32px;max-width:640px;line-height:1.55">
+      Two-page challenge sheets that go beyond the coloring page. Vocabulary matching, fill-in-the-blanks, ingredient origins, kitchen maths, senses journaling, and design-your-own-plate. For kids who are ready for more.
+    </p>
+    <div class="worksheet-grid">
+
+      <a class="ws-card" href="../print/summer-berry-shortcakes-worksheet.html">
+        <div class="ws-color" style="background:var(--jc-red)"></div>
+        <div class="ws-info">
+          <span class="ages">Ages 9–12</span>
+          <h3>Summer Berry Shortcakes</h3>
+          <p>Enzymes, flakiness, baking science, and design-your-own topping.</p>
+          <span class="dl-link">Download worksheet →</span>
+        </div>
+      </a>
+
+      <a class="ws-card" href="../print/lemongrass-chicken-worksheet.html">
+        <div class="ws-color" style="background:var(--jc-teal)"></div>
+        <div class="ws-info">
+          <span class="ages">Ages 9–12</span>
+          <h3>Lemongrass Chicken Salad</h3>
+          <p>Nuoc cham science, Vietnamese herbs, and scaling the dressing.</p>
+          <span class="dl-link">Download worksheet →</span>
+        </div>
+      </a>
+
+      <a class="ws-card" href="../print/korean-beef-bulgogi-worksheet.html">
+        <div class="ws-color" style="background:var(--jc-orange)"></div>
+        <div class="ws-info">
+          <span class="ages">Ages 9–12</span>
+          <h3>Korean Beef Bulgogi Skewers</h3>
+          <p>Enzyme tenderising, "fire meat" history, and recipe scaling.</p>
+          <span class="dl-link">Download worksheet →</span>
+        </div>
+      </a>
+
+      <a class="ws-card" href="../print/chicken-stroganoff-worksheet.html">
+        <div class="ws-color" style="background:var(--jc-yellow)"></div>
+        <div class="ws-info">
+          <span class="ages">Ages 9–12</span>
+          <h3>Chicken Stroganoff</h3>
+          <p>Sour cream chemistry, Tsarist kitchens, and building a sauce.</p>
+          <span class="dl-link">Download worksheet →</span>
+        </div>
+      </a>
+
+      <a class="ws-card" href="../print/lentil-bolognese-worksheet.html">
+        <div class="ws-color" style="background:var(--jc-teal)"></div>
+        <div class="ws-info">
+          <span class="ages">Ages 9–12</span>
+          <h3>Lentil Bolognese</h3>
+          <p>Lentil types, Italian soffritto, and vegetarian protein swaps.</p>
+          <span class="dl-link">Download worksheet →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- EMAIL CAPTURE -->
+<div class="email-capture">
+  <div class="ec-text">
+    <h2>New Recipes<br>Every <span class="yl">Month</span></h2>
+    <p>Get new recipe sheets and worksheets straight to your inbox. Free to download and print.</p>
+  </div>
+  <form class="ec-form" onsubmit="handleSignup(event)">
+    <input type="email" name="email" placeholder="your@email.com" required>
+    <button type="submit">Subscribe Free</button>
+    <p class="note">Free forever · Unsubscribe any time</p>
+  </form>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="foot-logo"><img src="../project/assets/logo/juniorchef-logo.png" alt="JuniorChef Saigon"></div>
+  <ul class="foot-links">
+    <li><a href="index.html">Recipes</a></li>
+    <li><a href="index.html#worksheets">Worksheets</a></li>
+    <li><a href="../index.html#about">About</a></li>
+  </ul>
+  <p class="foot-copy">© 2026 JuniorChef Saigon · International Cooking Clubs · HCMC, Vietnam</p>
+</footer>
+
+<script>
+function handleSignup(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button');
+  btn.textContent = 'Done! Check your inbox ✓';
+  btn.style.background = 'var(--jc-teal)';
+  btn.style.color = '#fff';
+  btn.disabled = true;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<!-- JuniorChef Saigon · Instagram Square Post · Lentil Bolognese
+     1080×1080px native.
+     Suggested caption:
+     "The most famous sauce in Italy — made vegetarian 🍝 Lentil Bolognese, free recipe sheet + worksheet for kids ages 6–12. The soffritto is the secret. 10 minutes, low heat, don't rush it. Free download at link in bio. #JuniorChefSaigon #LentilBolognese #VegetarianKids #FreePrintable #KidsInTheKitchen"
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1080">
+<title>Lentil Bolognese · IG Square</title>
+<link rel="stylesheet" href="../project/colors_and_type.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1080px; overflow: hidden; }
+  body { background: var(--paper-warm); position: relative; font-family: var(--font-display); }
+
+  .photo {
+    position: absolute; right: 0; top: 0; bottom: 0; width: 540px; overflow: hidden;
+  }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .photo::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(to right, var(--paper-warm) 0%, transparent 45%);
+  }
+
+  .content {
+    position: absolute; left: 0; top: 0; bottom: 0; width: 640px;
+    padding: 80px 56px 80px 80px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    z-index: 2;
+  }
+
+  .logo img { height: 68px; }
+
+  .text { display: flex; flex-direction: column; gap: 20px; }
+
+  .eyebrow {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 22px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--jc-teal);
+    display: flex; align-items: center; gap: 16px;
+  }
+  .eyebrow::before {
+    content: ''; display: block;
+    width: 56px; height: 4px; background: var(--jc-teal); border-radius: 2px;
+  }
+
+  .dish-title {
+    font-size: 112px; line-height: 0.88;
+    text-transform: uppercase; letter-spacing: -0.02em; color: var(--ink);
+  }
+  .dish-title .teal { color: var(--jc-teal); }
+  .dish-title .or { color: var(--jc-orange); }
+
+  .tagline {
+    font-family: var(--font-hand); font-weight: 700;
+    font-size: 44px; line-height: 1.2; color: var(--ink-soft);
+  }
+
+  .bottom-row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  .ages {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 22px; letter-spacing: 0.1em; text-transform: uppercase;
+    background: var(--jc-yellow); color: var(--ink);
+    padding: 10px 24px; border-radius: 999px;
+    border: 3px solid var(--ink); box-shadow: 0 4px 0 var(--ink);
+  }
+  .cta {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 22px; letter-spacing: 0.1em; text-transform: uppercase;
+    background: var(--jc-teal); color: #fff;
+    padding: 10px 24px; border-radius: 999px;
+    border: 3px solid var(--ink); box-shadow: 0 4px 0 var(--ink);
+  }
+
+  .dot { position: absolute; border-radius: 999px; border: 3px solid var(--ink); }
+</style>
+</head>
+<body>
+
+<div class="dot" style="width:72px;height:72px;background:var(--jc-teal);top:56px;right:514px;transform:rotate(8deg)"></div>
+<div class="dot" style="width:44px;height:44px;background:var(--jc-orange);top:180px;right:492px"></div>
+<div class="dot" style="width:32px;height:32px;background:var(--jc-yellow);bottom:240px;right:500px"></div>
+
+<div class="photo">
+  <img src="../project/assets/photos/lentil-bolognese.png" alt="Lentil Bolognese">
+</div>
+
+<div class="content">
+  <div class="logo"><img src="../project/assets/logo/juniorchef-logo.png" alt="JuniorChef Saigon"></div>
+
+  <div class="text">
+    <div class="eyebrow">Recipe Drop · Italian</div>
+    <h1 class="dish-title">
+      <span class="teal">Lentil</span><br>
+      <span class="or">Bolog-</span><br>
+      nese
+    </h1>
+    <div class="tagline">The soffritto<br>is everything.</div>
+  </div>
+
+  <div class="bottom-row">
+    <div class="ages">Ages 6–12</div>
+    <div class="cta">Free Download</div>
+  </div>
+</div>
+
+</body>
+</html>

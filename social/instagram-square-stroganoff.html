@@ -1,0 +1,113 @@
+<!doctype html>
+<!-- JuniorChef Saigon · Instagram Square Post · Chicken Stroganoff
+     1080×1080px native.
+     Suggested caption:
+     "Russia's glossy secret 🍄 Chicken Stroganoff — free recipe sheet + worksheet for kids ages 6–12. Golden chicken, soft mushrooms, sour cream sauce. The one rule: add the sour cream OFF the heat. Free download at link in bio. #JuniorChefSaigon #ChickenStroganoff #KidsInTheKitchen #FreePrintable"
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1080">
+<title>Chicken Stroganoff · IG Square</title>
+<link rel="stylesheet" href="../project/colors_and_type.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1080px; overflow: hidden; }
+  body { background: var(--ink); position: relative; font-family: var(--font-display); }
+
+  .photo { position: absolute; inset: 0; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; opacity: 0.4; display: block; }
+  .photo::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(31,26,20,0.95) 40%, rgba(31,26,20,0.4) 100%);
+  }
+
+  .content {
+    position: absolute; inset: 0;
+    padding: 80px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    z-index: 2;
+  }
+
+  .logo img { height: 68px; filter: brightness(0) invert(1); opacity: 0.85; }
+
+  .text { display: flex; flex-direction: column; gap: 22px; max-width: 700px; }
+
+  .eyebrow {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 22px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--jc-yellow);
+    display: flex; align-items: center; gap: 16px;
+  }
+  .eyebrow::before {
+    content: ''; display: block;
+    width: 56px; height: 4px; background: var(--jc-yellow); border-radius: 2px;
+  }
+
+  .dish-title {
+    font-size: 116px; line-height: 0.88;
+    text-transform: uppercase; letter-spacing: -0.02em; color: #fff;
+  }
+  .dish-title .yl { color: var(--jc-yellow); }
+  .dish-title .or { color: var(--jc-orange); }
+
+  .tagline {
+    font-family: var(--font-hand); font-weight: 700;
+    font-size: 50px; line-height: 1.2;
+    color: rgba(255,255,255,0.65);
+  }
+
+  .bottom-row { display: flex; align-items: center; gap: 18px; }
+  .ages {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 22px; letter-spacing: 0.1em; text-transform: uppercase;
+    background: var(--jc-yellow); color: var(--ink);
+    padding: 10px 24px; border-radius: 999px;
+    border: 3px solid rgba(255,255,255,0.2);
+    box-shadow: 0 4px 0 rgba(0,0,0,0.5);
+  }
+  .cta {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 22px; letter-spacing: 0.1em; text-transform: uppercase;
+    background: transparent; color: var(--jc-yellow);
+    padding: 10px 24px; border-radius: 999px;
+    border: 3px solid var(--jc-yellow);
+  }
+
+  /* Decorative corner element */
+  .corner-dot {
+    position: absolute; border-radius: 999px;
+    border: 3px solid rgba(255,255,255,0.15);
+  }
+</style>
+</head>
+<body>
+
+<div class="corner-dot" style="width:180px;height:180px;background:var(--jc-yellow);opacity:0.12;top:-60px;right:-60px"></div>
+<div class="corner-dot" style="width:80px;height:80px;background:var(--jc-orange);opacity:0.2;bottom:120px;right:80px"></div>
+
+<div class="photo">
+  <img src="../project/assets/photos/chicken-stroganoff.png" alt="Chicken Stroganoff">
+</div>
+
+<div class="content">
+  <div class="logo"><img src="../project/assets/logo/juniorchef-logo.png" alt="JuniorChef Saigon"></div>
+
+  <div class="text">
+    <div class="eyebrow">Recipe Drop · Russian</div>
+    <h1 class="dish-title">
+      <span class="yl">Chicken</span><br>
+      <span class="or">Strog-</span><br>
+      anoff
+    </h1>
+    <div class="tagline">Russia's<br>glossy secret.</div>
+  </div>
+
+  <div class="bottom-row">
+    <div class="ages">Ages 6–12</div>
+    <div class="cta">Free Download</div>
+  </div>
+</div>
+
+</body>
+</html>

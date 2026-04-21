@@ -1,0 +1,155 @@
+<!doctype html>
+<!-- JuniorChef Saigon · Instagram Square Post · Summer Berry Shortcakes
+     1080×1080px native. To export: open in browser at 100% zoom,
+     set viewport to exactly 1080px wide, screenshot.
+     Suggested caption:
+     "Summer is in every bite 🍓 Our Summer Berry Shortcakes recipe is free to download and print — link in bio. Cold butter, juicy berries, whipped cream. Perfect for kids aged 6–12 who want to bake something real. #JuniorChefSaigon #KidsInTheKitchen #FreePrintable #CookingWithKids"
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1080">
+<title>Summer Berry Shortcakes · IG Square</title>
+<link rel="stylesheet" href="../project/colors_and_type.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1080px; overflow: hidden; }
+  body {
+    background: var(--paper-warm);
+    font-family: var(--font-display);
+    position: relative;
+  }
+
+  /* Background accent shapes */
+  .bg-circle {
+    position: absolute; border-radius: 999px;
+    pointer-events: none;
+  }
+
+  /* Photo — fills right half, bleeds to edges */
+  .photo {
+    position: absolute;
+    right: 0; top: 0; bottom: 0;
+    width: 560px;
+    overflow: hidden;
+  }
+  .photo img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  /* Fade the photo into the background on the left */
+  .photo::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to right, var(--paper-warm) 0%, transparent 40%);
+  }
+
+  /* Left content panel */
+  .content {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 620px;
+    padding: 80px 56px 80px 80px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    z-index: 2;
+  }
+
+  /* Logo */
+  .logo img { height: 70px; }
+
+  /* Middle text block */
+  .text { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 24px; }
+
+  .eyebrow {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 22px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--jc-red);
+    display: flex; align-items: center; gap: 16px;
+  }
+  .eyebrow::before {
+    content: ''; display: block;
+    width: 56px; height: 4px; background: var(--jc-red);
+    border-radius: 2px; flex-shrink: 0;
+  }
+
+  .dish-title {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 108px; line-height: 0.88;
+    text-transform: uppercase; letter-spacing: -0.02em;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .dish-title .red { color: var(--jc-red); }
+  .dish-title .teal { color: var(--jc-teal); }
+  .dish-title .or { color: var(--jc-orange); }
+
+  .tagline {
+    font-family: var(--font-hand); font-weight: 700;
+    font-size: 44px; line-height: 1.2;
+    color: var(--ink-soft);
+  }
+
+  /* Ages badge + CTA */
+  .bottom-row {
+    display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+  }
+  .ages {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 22px; letter-spacing: 0.1em; text-transform: uppercase;
+    background: var(--jc-yellow); color: var(--ink);
+    padding: 10px 24px; border-radius: 999px;
+    border: 3px solid var(--ink);
+    box-shadow: 0 4px 0 var(--ink);
+  }
+  .cta {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 22px; letter-spacing: 0.1em; text-transform: uppercase;
+    background: var(--jc-red); color: #fff;
+    padding: 10px 24px; border-radius: 999px;
+    border: 3px solid var(--ink);
+    box-shadow: 0 4px 0 var(--ink);
+  }
+
+  /* Decorative colored dots */
+  .dot {
+    position: absolute; border-radius: 999px;
+    border: 3px solid var(--ink);
+    pointer-events: none; z-index: 1;
+  }
+</style>
+</head>
+<body>
+
+<!-- Decorative dots -->
+<div class="dot" style="width:80px;height:80px;background:var(--jc-teal);top:60px;right:520px;transform:rotate(12deg)"></div>
+<div class="dot" style="width:48px;height:48px;background:var(--jc-yellow);top:200px;right:490px"></div>
+<div class="dot" style="width:36px;height:36px;background:var(--jc-red);bottom:280px;right:500px"></div>
+
+<!-- Hero photo (right side) -->
+<div class="photo">
+  <img src="../project/assets/photos/summer-berry-shortcakes.png" alt="Summer Berry Shortcakes">
+</div>
+
+<!-- Left content -->
+<div class="content">
+  <div class="logo">
+    <img src="../project/assets/logo/juniorchef-logo.png" alt="JuniorChef Saigon">
+  </div>
+
+  <div class="text">
+    <div class="eyebrow">Recipe Drop</div>
+    <h1 class="dish-title">
+      <span class="red">Berry</span><br>
+      <span class="teal">Short</span><br>
+      <span class="or">-cake</span>
+    </h1>
+    <div class="tagline">Summer in a mouthful.</div>
+  </div>
+
+  <div class="bottom-row">
+    <div class="ages">Ages 6–12</div>
+    <div class="cta">Free Download</div>
+  </div>
+</div>
+
+</body>
+</html>

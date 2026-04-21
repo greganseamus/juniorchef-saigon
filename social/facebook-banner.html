@@ -1,0 +1,117 @@
+<!doctype html>
+<!-- JuniorChef Saigon · Facebook / LinkedIn Post Banner
+     1200×628px native.
+     Suggested caption (Facebook/LinkedIn):
+     "Five world recipes, free to print. Our recipe sheets and worksheets for ages 6–12 cover Summer Berry Shortcakes, Lemongrass Chicken Salad, Korean Beef Bulgogi Skewers, Chicken Stroganoff, and Lentil Bolognese. Download free at the link below. Cooked fresh every session inside international schools across Ho Chi Minh City. 🍴 #JuniorChefSaigon #HCMC #KidsInTheKitchen"
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200">
+<title>JuniorChef Saigon · Facebook Banner</title>
+<link rel="stylesheet" href="../project/colors_and_type.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1200px; height: 628px; overflow: hidden; }
+  body {
+    background: var(--paper-warm);
+    font-family: var(--font-display);
+    display: flex;
+  }
+
+  /* Left: content */
+  .left {
+    flex: 1;
+    padding: 56px 56px 56px 72px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    background: var(--paper-warm);
+    z-index: 2;
+  }
+
+  .logo img { height: 60px; }
+
+  .text { display: flex; flex-direction: column; gap: 16px; }
+
+  .eyebrow {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 16px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--jc-red);
+    display: flex; align-items: center; gap: 14px;
+  }
+  .eyebrow::before {
+    content: ''; display: block;
+    width: 40px; height: 3px; background: var(--jc-red); border-radius: 2px;
+  }
+
+  h1 {
+    font-size: 72px; line-height: 0.9;
+    text-transform: uppercase; letter-spacing: -0.02em; color: var(--ink);
+  }
+  h1 .red { color: var(--jc-red); }
+  h1 .teal { color: var(--jc-teal); }
+
+  .sub {
+    font-family: var(--font-body); font-weight: 600;
+    font-size: 18px; color: var(--ink-soft); line-height: 1.5;
+    max-width: 400px;
+  }
+
+  .bottom-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .pill {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 15px; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 8px 18px; border-radius: 999px;
+    border: 2.5px solid var(--ink);
+    box-shadow: 0 3px 0 var(--ink);
+  }
+  .pill.red { background: var(--jc-red); color: #fff; }
+  .pill.yellow { background: var(--jc-yellow); color: var(--ink); }
+
+  /* Right: photo mosaic */
+  .right {
+    width: 480px; flex-shrink: 0;
+    position: relative; overflow: hidden;
+  }
+  .right::before {
+    content: '';
+    position: absolute; top: 0; left: 0; bottom: 0; width: 80px; z-index: 3;
+    background: linear-gradient(to right, var(--paper-warm), transparent);
+  }
+  .mosaic {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%; height: 100%;
+    gap: 4px;
+  }
+  .mosaic img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  /* Top-left spans 2 rows */
+  .mosaic img:first-child { grid-row: 1 / 3; }
+</style>
+</head>
+<body>
+
+<div class="left">
+  <div class="logo"><img src="../project/assets/logo/juniorchef-logo.png" alt="JuniorChef Saigon"></div>
+  <div class="text">
+    <div class="eyebrow">Free Downloads · 5 Recipes</div>
+    <h1><span class="red">World</span> Recipes<br>for <span class="teal">Kids</span></h1>
+    <p class="sub">Recipe sheets + worksheets. Free to print. Ages 6–12. Cooking clubs inside international schools in HCMC.</p>
+  </div>
+  <div class="bottom-row">
+    <div class="pill red">Free Download</div>
+    <div class="pill yellow">Ages 6–12</div>
+    <div style="font-family:var(--font-body);font-size:15px;color:var(--ink-muted);font-weight:700;letter-spacing:0.06em">juniorchef-saigon.com</div>
+  </div>
+</div>
+
+<div class="right">
+  <div class="mosaic">
+    <img src="../project/assets/photos/korean-beef-bulgogi-skewers.png" alt="Bulgogi">
+    <img src="../project/assets/photos/summer-berry-shortcakes.png" alt="Shortcakes">
+    <img src="../project/assets/photos/lentil-bolognese.png" alt="Bolognese">
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<!-- JuniorChef Saigon · Instagram Square Post · Korean Beef Bulgogi Skewers
+     1080×1080px native.
+     Suggested caption:
+     "Fire meat, made by kids 🔥 Korean Beef Bulgogi Skewers — free recipe sheet and worksheet to download and print. Enzyme tenderising, proper sear, lettuce wraps. For ages 6–12. Link in bio. #JuniorChefSaigon #KoreanFood #KidsInTheKitchen #Bulgogi #FreePrintable"
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1080">
+<title>Korean Beef Bulgogi · IG Square</title>
+<link rel="stylesheet" href="../project/colors_and_type.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1080px; overflow: hidden; }
+  body {
+    background: var(--ink);
+    font-family: var(--font-display);
+    position: relative;
+  }
+  .photo {
+    position: absolute; inset: 0;
+    overflow: hidden;
+  }
+  .photo img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    opacity: 0.55;
+  }
+  /* Gradient overlay — bottom to top */
+  .photo::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(31,26,20,0.98) 0%, rgba(31,26,20,0.6) 55%, rgba(31,26,20,0.1) 100%);
+  }
+
+  .content {
+    position: absolute; inset: 0;
+    padding: 72px 80px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    z-index: 2;
+  }
+
+  .logo img { height: 64px; filter: brightness(0) invert(1); opacity: 0.9; }
+
+  .text { display: flex; flex-direction: column; gap: 20px; }
+
+  .eyebrow {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 22px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--jc-orange);
+    display: flex; align-items: center; gap: 16px;
+  }
+  .eyebrow::before {
+    content: ''; display: block;
+    width: 56px; height: 4px; background: var(--jc-orange);
+    border-radius: 2px; flex-shrink: 0;
+  }
+
+  .dish-title {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 110px; line-height: 0.88;
+    text-transform: uppercase; letter-spacing: -0.02em;
+    color: #fff;
+  }
+  .dish-title .or { color: var(--jc-orange); }
+  .dish-title .yl { color: var(--jc-yellow); }
+
+  .tagline {
+    font-family: var(--font-hand); font-weight: 700;
+    font-size: 46px; line-height: 1.2;
+    color: rgba(255,255,255,0.75);
+  }
+
+  .bottom-row {
+    display: flex; align-items: center; gap: 20px;
+  }
+  .ages {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 22px; letter-spacing: 0.1em; text-transform: uppercase;
+    background: var(--jc-yellow); color: var(--ink);
+    padding: 10px 24px; border-radius: 999px;
+    border: 3px solid rgba(255,255,255,0.3);
+    box-shadow: 0 4px 0 rgba(0,0,0,0.4);
+  }
+  .cta {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 22px; letter-spacing: 0.1em; text-transform: uppercase;
+    background: var(--jc-orange); color: #fff;
+    padding: 10px 24px; border-radius: 999px;
+    border: 3px solid rgba(255,255,255,0.3);
+    box-shadow: 0 4px 0 rgba(0,0,0,0.4);
+  }
+  .fact {
+    font-family: var(--font-body); font-size: 22px; color: rgba(255,255,255,0.5);
+    letter-spacing: 0.04em;
+  }
+</style>
+</head>
+<body>
+
+<div class="photo">
+  <img src="../project/assets/photos/korean-beef-bulgogi-skewers.png" alt="Korean Beef Bulgogi Skewers">
+</div>
+
+<div class="content">
+  <div class="logo">
+    <img src="../project/assets/logo/juniorchef-logo.png" alt="JuniorChef Saigon">
+  </div>
+
+  <div class="text">
+    <div class="eyebrow">Recipe Drop · Korean</div>
+    <h1 class="dish-title">
+      <span class="or">Bulgogi</span><br>
+      <span class="yl">Skewers</span>
+    </h1>
+    <div class="tagline">Fire meat.<br>Made by kids.</div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:16px">
+    <div class="fact">Free recipe sheet + worksheet · Link in bio</div>
+    <div class="bottom-row">
+      <div class="ages">Ages 6–12</div>
+      <div class="cta">Free Download</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

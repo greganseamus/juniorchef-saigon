@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Social Media Kit — JuniorChef Saigon</title>
+<link rel="stylesheet" href="../site.css">
+<style>
+  .social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 32px;
+  }
+  .social-preview {
+    display: flex; flex-direction: column; gap: 16px;
+  }
+  .social-preview .label {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--ink-muted); display: flex; align-items: center; gap: 10px;
+  }
+  .social-preview .label span {
+    background: var(--paper-warm); border: 2px solid var(--rule);
+    padding: 3px 10px; border-radius: 999px;
+  }
+  .social-preview .frame {
+    border: 2.5px solid var(--ink); border-radius: var(--radius-lg);
+    overflow: hidden; box-shadow: var(--shadow-lg);
+  }
+  .social-preview .actions {
+    display: flex; gap: 10px; flex-wrap: wrap;
+  }
+  .social-preview .actions a {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 8px 16px; border-radius: var(--radius-pill);
+    border: 2px solid var(--ink); text-decoration: none; color: var(--ink);
+    background: var(--paper-warm);
+    transition: background 0.15s;
+  }
+  .social-preview .actions a:hover { background: var(--ink); color: #fff; }
+
+  /* ---- INSTAGRAM SQUARE (1080×1080) scaled to fit ---- */
+  .ig-square {
+    width: 100%; aspect-ratio: 1;
+    background: var(--paper-warm);
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+    font-family: var(--font-display);
+  }
+
+  /* ---- INSTAGRAM STORY (1080×1920 → 9:16) ---- */
+  .ig-story {
+    width: 100%; aspect-ratio: 9/16;
+    background: var(--ink);
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+
+  /* ---- FACEBOOK/LINKEDIN LANDSCAPE (1200×628) ---- */
+  .fb-landscape {
+    width: 100%; aspect-ratio: 1200/628;
+    background: var(--paper-warm);
+    position: relative; overflow: hidden;
+    display: flex;
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="logo" href="../index.html"><img src="../project/assets/logo/juniorchef-logo.png" alt="JuniorChef Saigon"></a>
+  <ul class="nav-links">
+    <li><a href="../recipes/index.html">Recipes</a></li>
+    <li><a href="../recipes/index.html#worksheets">Worksheets</a></li>
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#free-downloads" class="nav-cta">Free Downloads</a></li>
+  </ul>
+</nav>
+
+<div style="background:var(--paper-warm);border-bottom:2.5px solid var(--ink);padding:clamp(36px,5vw,72px) clamp(20px,5vw,80px)">
+  <div class="container" style="padding:0">
+    <div style="font-family:var(--font-body);font-weight:800;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--jc-red);margin-bottom:12px">Social Media Kit</div>
+    <h1 style="font-family:var(--font-display);font-weight:700;font-size:clamp(36px,5vw,56px);line-height:0.95;text-transform:uppercase;letter-spacing:-0.015em;color:var(--ink);margin:0 0 16px">Post Templates</h1>
+    <p style="font-family:var(--font-body);font-size:var(--fs-lg);color:var(--ink-soft);margin:0;max-width:560px;line-height:1.5">
+      Ready-to-use social post templates for Instagram, Facebook, and LinkedIn. Screenshot each at 2× for pixel-perfect output, or use the linked print files for high-res export.
+    </p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Instagram Square Posts</h2>
+    </div>
+    <p style="font-family:var(--font-body);font-size:var(--fs-base);color:var(--ink-soft);margin:0 0 36px;max-width:600px">1080×1080px. One per recipe — hero photo, dish name, quick hook, logo. Screenshot at 2× device pixel ratio for full resolution.</p>
+
+    <div class="social-grid">
+
+      <div class="social-preview">
+        <div class="label">Instagram Square <span>1080 × 1080</span></div>
+        <div class="frame">
+          <iframe src="instagram-square-berry.html" style="width:100%;aspect-ratio:1;border:none;display:block" loading="lazy" title="Summer Berry Shortcakes"></iframe>
+        </div>
+        <div class="actions">
+          <a href="instagram-square-berry.html" target="_blank">Summer Berry Shortcakes</a>
+        </div>
+      </div>
+
+      <div class="social-preview">
+        <div class="label">Instagram Square <span>1080 × 1080</span></div>
+        <div class="frame">
+          <iframe src="instagram-square-bulgogi.html" style="width:100%;aspect-ratio:1;border:none;display:block" loading="lazy" title="Korean Beef Bulgogi"></iframe>
+        </div>
+        <div class="actions">
+          <a href="instagram-square-bulgogi.html" target="_blank">Korean Beef Bulgogi</a>
+        </div>
+      </div>
+
+      <div class="social-preview">
+        <div class="label">Instagram Square <span>1080 × 1080</span></div>
+        <div class="frame">
+          <iframe src="instagram-square-lemongrass.html" style="width:100%;aspect-ratio:1;border:none;display:block" loading="lazy" title="Lemongrass Chicken Salad"></iframe>
+        </div>
+        <div class="actions">
+          <a href="instagram-square-lemongrass.html" target="_blank">Lemongrass Chicken Salad</a>
+        </div>
+      </div>
+
+      <div class="social-preview">
+        <div class="label">Instagram Square <span>1080 × 1080</span></div>
+        <div class="frame">
+          <iframe src="instagram-square-stroganoff.html" style="width:100%;aspect-ratio:1;border:none;display:block" loading="lazy" title="Chicken Stroganoff"></iframe>
+        </div>
+        <div class="actions">
+          <a href="instagram-square-stroganoff.html" target="_blank">Chicken Stroganoff</a>
+        </div>
+      </div>
+
+      <div class="social-preview">
+        <div class="label">Instagram Square <span>1080 × 1080</span></div>
+        <div class="frame">
+          <iframe src="instagram-square-bolognese.html" style="width:100%;aspect-ratio:1;border:none;display:block" loading="lazy" title="Lentil Bolognese"></iframe>
+        </div>
+        <div class="actions">
+          <a href="instagram-square-bolognese.html" target="_blank">Lentil Bolognese</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Instagram Stories</h2>
+    </div>
+    <p style="font-family:var(--font-body);font-size:var(--fs-base);color:var(--ink-soft);margin:0 0 36px;max-width:600px">1080×1920px (9:16). "Free Download" call-to-action stories with link sticker placement marked. Use for recipe launch announcements.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:32px">
+
+      <div class="social-preview">
+        <div class="label">Story <span>9:16</span></div>
+        <div class="frame">
+          <iframe src="instagram-story-berry.html" style="width:100%;aspect-ratio:9/16;border:none;display:block" loading="lazy" title="Berry Story"></iframe>
+        </div>
+        <div class="actions">
+          <a href="instagram-story-berry.html" target="_blank">Open Template</a>
+        </div>
+      </div>
+
+      <div class="social-preview">
+        <div class="label">Story <span>9:16</span></div>
+        <div class="frame">
+          <iframe src="instagram-story-bulgogi.html" style="width:100%;aspect-ratio:9/16;border:none;display:block" loading="lazy" title="Bulgogi Story"></iframe>
+        </div>
+        <div class="actions">
+          <a href="instagram-story-bulgogi.html" target="_blank">Open Template</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Facebook / LinkedIn Banner</h2>
+    </div>
+    <p style="font-family:var(--font-body);font-size:var(--fs-base);color:var(--ink-soft);margin:0 0 36px;max-width:600px">1200×628px. General purpose post for Facebook and LinkedIn. Announce free recipe downloads, new recipes, or club enrollment.</p>
+
+    <div class="social-preview" style="max-width:700px">
+      <div class="label">Facebook / LinkedIn <span>1200 × 628</span></div>
+      <div class="frame">
+        <iframe src="facebook-banner.html" style="width:100%;aspect-ratio:1200/628;border:none;display:block" loading="lazy" title="Facebook Banner"></iframe>
+      </div>
+      <div class="actions">
+        <a href="facebook-banner.html" target="_blank">Open Template</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--paper-warm)">
+  <div class="container">
+    <div class="section-head"><h2>Usage Notes</h2></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px">
+      <div style="background:var(--paper);border:2.5px solid var(--ink);border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow-md)">
+        <h3 style="font-family:var(--font-display);font-weight:600;font-size:var(--fs-xl);text-transform:uppercase;color:var(--ink);margin:0 0 10px">Exporting</h3>
+        <p style="font-family:var(--font-body);font-size:var(--fs-sm);color:var(--ink-soft);margin:0;line-height:1.6">Open any template full-size, set browser zoom to 200%, then screenshot. This gives you 2× pixel density (effectively 2160px wide for the square posts).</p>
+      </div>
+      <div style="background:var(--paper);border:2.5px solid var(--ink);border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow-md)">
+        <h3 style="font-family:var(--font-display);font-weight:600;font-size:var(--fs-xl);text-transform:uppercase;color:var(--ink);margin:0 0 10px">Captions</h3>
+        <p style="font-family:var(--font-body);font-size:var(--fs-sm);color:var(--ink-soft);margin:0;line-height:1.6">Suggested captions live in comments inside each template file. Copy, adjust the recipe name, and paste into your scheduler.</p>
+      </div>
+      <div style="background:var(--paper);border:2.5px solid var(--ink);border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow-md)">
+        <h3 style="font-family:var(--font-display);font-weight:600;font-size:var(--fs-xl);text-transform:uppercase;color:var(--ink);margin:0 0 10px">New Recipes</h3>
+        <p style="font-family:var(--font-body);font-size:var(--fs-sm);color:var(--ink-soft);margin:0;line-height:1.6">Swap the hero photo and recipe name — all other styles inherit from the design tokens. Takes 2 minutes per recipe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="foot-logo"><img src="../project/assets/logo/juniorchef-logo.png" alt="JuniorChef Saigon"></div>
+  <ul class="foot-links">
+    <li><a href="../recipes/index.html">Recipes</a></li>
+    <li><a href="../index.html#about">About</a></li>
+  </ul>
+  <p class="foot-copy">© 2026 JuniorChef Saigon · International Cooking Clubs · HCMC, Vietnam</p>
+</footer>
+
+</body>
+</html>

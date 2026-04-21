@@ -1,0 +1,149 @@
+<!doctype html>
+<!-- JuniorChef Saigon · Instagram Story · Summer Berry Shortcakes
+     1080×1920px (9:16). Scaled down in the social kit index for preview.
+     Place a "Link" sticker at the [LINK STICKER] marker.
+
+     Suggested caption / overlay text: "Free to download 👇"
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1080">
+<title>Berry Story · JuniorChef</title>
+<link rel="stylesheet" href="../project/colors_and_type.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; }
+  body {
+    background: var(--paper-warm);
+    font-family: var(--font-display);
+    position: relative;
+  }
+
+  /* Full bleed photo — top 55% */
+  .photo {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1100px;
+    overflow: hidden;
+  }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .photo::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, transparent 50%, var(--paper-warm) 100%);
+  }
+
+  /* Decorative horizontal stripe */
+  .stripe {
+    position: absolute;
+    top: 1050px; left: 0; right: 0;
+    height: 10px; background: var(--ink);
+  }
+
+  /* Bottom content card */
+  .card {
+    position: absolute;
+    top: 1080px; left: 72px; right: 72px;
+    background: var(--paper-warm);
+    display: flex; flex-direction: column;
+    gap: 36px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 28px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--jc-red);
+    display: flex; align-items: center; gap: 20px;
+  }
+  .eyebrow::before {
+    content: ''; display: block;
+    width: 64px; height: 5px; background: var(--jc-red);
+    border-radius: 2px; flex-shrink: 0;
+  }
+
+  .dish-title {
+    font-size: 144px; line-height: 0.88;
+    text-transform: uppercase; letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+  .dish-title .red { color: var(--jc-red); }
+  .dish-title .teal { color: var(--jc-teal); }
+
+  .tagline {
+    font-family: var(--font-hand); font-weight: 700;
+    font-size: 64px; line-height: 1.2;
+    color: var(--ink-soft);
+  }
+
+  .cta-row {
+    display: flex; flex-direction: column; gap: 20px;
+    margin-top: 16px;
+  }
+  .link-marker {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 28px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink-muted); border: 3px dashed var(--ink-muted);
+    border-radius: 20px; padding: 24px 32px; text-align: center;
+  }
+  .cta-btn {
+    background: var(--jc-red); color: #fff;
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 36px; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 28px 48px; border-radius: 999px;
+    border: 4px solid var(--ink);
+    box-shadow: 0 8px 0 var(--ink);
+    text-align: center;
+  }
+  .ages-row {
+    display: flex; align-items: center; gap: 20px;
+    flex-wrap: wrap;
+  }
+  .ages {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 28px; letter-spacing: 0.1em; text-transform: uppercase;
+    background: var(--jc-yellow); color: var(--ink);
+    padding: 12px 28px; border-radius: 999px;
+    border: 3px solid var(--ink);
+    box-shadow: 0 5px 0 var(--ink);
+  }
+
+  /* Logo at very top */
+  .logo-top {
+    position: absolute;
+    top: 64px; left: 72px;
+  }
+  .logo-top img { height: 80px; }
+</style>
+</head>
+<body>
+
+<div class="photo">
+  <img src="../project/assets/photos/summer-berry-shortcakes.png" alt="Summer Berry Shortcakes">
+</div>
+<div class="stripe"></div>
+
+<div class="logo-top">
+  <img src="../project/assets/logo/juniorchef-logo.png" alt="JuniorChef Saigon">
+</div>
+
+<div class="card">
+  <div class="eyebrow">Free Recipe Drop</div>
+  <h1 class="dish-title">
+    <span class="red">Summer</span><br>
+    <span class="teal">Berry</span><br>
+    Short-<br>cake
+  </h1>
+  <div class="tagline">Bake it this<br>weekend.</div>
+  <div class="cta-row">
+    <div class="link-marker">👆 Link sticker here</div>
+    <div class="cta-btn">Download Free</div>
+    <div class="ages-row">
+      <div class="ages">Ages 6–12</div>
+      <div style="font-family:var(--font-body);font-size:26px;color:var(--ink-muted)">Free · Print at home</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

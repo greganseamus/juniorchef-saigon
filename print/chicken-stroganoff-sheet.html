@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chicken Stroganoff · JuniorChef Saigon Recipe Sheet</title>
+<link rel="stylesheet" href="../../project/colors_and_type.css">
+<style>
+  html, body { margin: 0; background: #2a2620; }
+  body { display: flex; flex-direction: column; align-items: center; gap: 28px; padding: 40px 0; }
+
+  .page {
+    width: 1400px;
+    height: 990px;
+    background: var(--paper);
+    box-shadow: 0 12px 48px rgba(0,0,0,0.35);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ---- PAGE 1 ---- */
+  .p1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr;
+    gap: 24px 48px;
+    padding: 40px 56px 56px;
+  }
+  .header {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header img { height: 72px; }
+  .eyebrow {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--jc-red);
+    display: flex; align-items: center; gap: 14px;
+  }
+  .eyebrow .rule { width: 48px; height: 2.5px; background: var(--jc-red); }
+
+  .title-block {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 18px;
+  }
+  .dish-title {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 68px; line-height: 0.92;
+    letter-spacing: -0.015em; text-transform: uppercase;
+    color: var(--ink);
+    text-wrap: balance;
+    margin: 0;
+  }
+  .title-side {
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+  }
+  .dish-title .red   { color: var(--jc-red); }
+  .dish-title .teal  { color: var(--jc-teal); }
+  .dish-title .or    { color: var(--jc-orange); }
+  .dish-title .yl    { color: var(--jc-yellow); }
+  .serves {
+    font-family: var(--font-hand); color: var(--jc-red);
+    font-size: 36px; line-height: 1; transform: rotate(-6deg); white-space: nowrap;
+  }
+
+  .hero-photo {
+    width: 170px; height: 170px;
+    border-radius: 22px;
+    overflow: hidden;
+    border: 4px solid var(--ink);
+    box-shadow: 0 8px 0 var(--ink);
+    transform: rotate(2deg);
+    flex-shrink: 0;
+  }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .tip-box {
+    background: var(--jc-yellow); border: 2.5px solid var(--ink);
+    border-radius: 20px; padding: 16px 20px;
+    box-shadow: 0 6px 0 var(--ink);
+    display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start;
+  }
+  .tip-box .star {
+    width: 44px; height: 44px; background: var(--jc-red); color: #fff;
+    border-radius: 999px; border: 2.5px solid var(--ink);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    box-shadow: 0 3px 0 var(--ink);
+  }
+  .tip-box .head {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--jc-red-deep); margin-bottom: 4px;
+  }
+  .tip-box .body {
+    font-family: var(--font-hand); font-weight: 700;
+    font-size: 22px; line-height: 1.15; color: var(--ink);
+  }
+
+  .ingredients h3 {
+    font-family: var(--font-display); font-weight: 600;
+    font-size: 32px; text-transform: uppercase; color: var(--ink);
+    margin: 0 0 14px;
+    border-bottom: 3px solid var(--ink);
+    padding-bottom: 8px;
+    display: flex; align-items: baseline; justify-content: space-between;
+  }
+  .ingredients h3 .for {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 13px; letter-spacing: 0.14em; color: var(--jc-red);
+    background: var(--jc-red-tint); padding: 4px 10px; border-radius: 999px;
+  }
+  .ingredients ul { list-style: none; padding: 0; margin: 0; }
+  .ingredients li {
+    font-family: var(--font-body); font-size: 17px; line-height: 1.45;
+    padding: 6px 0;
+    border-bottom: 1px dashed var(--rule);
+    display: flex; gap: 10px; align-items: baseline;
+  }
+  .ingredients li::before {
+    content: ''; width: 8px; height: 8px; border-radius: 2px;
+    background: var(--jc-teal); flex-shrink: 0; transform: translateY(2px);
+  }
+  .sub { margin-top: 20px; }
+  .sub h4 {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: 18px; text-transform: uppercase; color: var(--jc-orange);
+    margin: 0 0 8px; letter-spacing: 0.04em;
+  }
+
+  .directions h3 {
+    font-family: var(--font-display); font-weight: 600;
+    font-size: 32px; text-transform: uppercase; color: var(--ink);
+    margin: 0 0 14px;
+    border-bottom: 3px solid var(--ink);
+    padding-bottom: 8px;
+  }
+  .step { display: grid; grid-template-columns: auto 1fr; gap: 14px; margin-bottom: 14px; }
+  .step .num {
+    width: 40px; height: 40px; border-radius: 999px; flex-shrink: 0;
+    background: var(--jc-red); color: #fff;
+    border: 2.5px solid var(--ink);
+    font-family: var(--font-display); font-weight: 700; font-size: 20px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 3px 0 var(--ink);
+  }
+  .step:nth-child(3n) .num { background: var(--jc-teal); }
+  .step:nth-child(3n+1) .num { background: var(--jc-orange); }
+  .step h5 {
+    font-family: var(--font-display); font-weight: 600;
+    font-size: 18px; text-transform: uppercase; color: var(--ink);
+    margin: 6px 0 2px; line-height: 1.1; letter-spacing: -0.005em;
+  }
+  .step p {
+    font-family: var(--font-body); font-size: 14.5px; line-height: 1.45;
+    color: var(--ink); margin: 0;
+  }
+
+  .footer {
+    position: absolute; left: 56px; bottom: 32px;
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .page-num {
+    position: absolute; right: 56px; top: 48px;
+    font-family: var(--font-mono); font-size: 12px; color: var(--ink-muted);
+  }
+
+  /* ---- PAGE 2 ---- */
+  .p2 {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 48px 56px 56px;
+  }
+  .p2 .header { border-bottom: 3px solid var(--ink); padding-bottom: 18px; }
+  .p2-banner {
+    margin-top: 20px;
+    display: flex; align-items: baseline; justify-content: space-between;
+  }
+  .p2 .label {
+    font-family: var(--font-display); font-weight: 600;
+    font-size: 40px; text-transform: uppercase;
+    letter-spacing: -0.005em; color: var(--ink);
+  }
+  .p2 .ages {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+    background: var(--jc-yellow); color: var(--ink);
+    padding: 6px 14px; border-radius: 999px;
+    border: 2.5px solid var(--ink);
+  }
+  .p2-scene {
+    margin: 24px 0;
+    flex: 1;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .p2-scene img {
+    max-width: 100%; max-height: 720px;
+    border-radius: 14px;
+    border: 2px solid var(--rule);
+  }
+
+  /* Print button */
+  .print-btn {
+    position: fixed; top: 16px; right: 16px;
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase;
+    background: var(--jc-red); color: #fff;
+    border: 2.5px solid var(--ink); border-radius: 999px;
+    padding: 10px 24px; cursor: pointer;
+    box-shadow: 0 4px 0 var(--ink);
+    z-index: 100;
+  }
+  .print-btn:hover { background: var(--jc-red-deep); }
+  @media print { .no-print { display: none !important; } }
+</style>
+</head>
+<body>
+
+<button class="print-btn no-print" onclick="window.print()">Print Sheet</button>
+
+<!-- Page 1 -->
+<div class="page p1">
+  <div class="header">
+    <img src="../../project/assets/logo/juniorchef-logo.png" alt="JuniorChef Saigon">
+    <div class="eyebrow"><span class="rule"></span>Recipe · Russian</div>
+  </div>
+  <div class="page-num">01 / 02</div>
+
+  <div class="title-block">
+    <h1 class="dish-title"><span class="teal">Chicken</span> <span class="red">Strog-</span><span class="or">anoff</span></h1>
+    <div class="title-side">
+      <div class="hero-photo"><img src="../../project/assets/photos/chicken-stroganoff.png" alt="Chicken Stroganoff"></div>
+      <div class="serves">for 4!</div>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <div class="star">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+    <div>
+      <div class="head">Chef's secret</div>
+      <div class="body">Add the sour cream off the heat and stir gently — boiling it will make it split and go grainy. Patience is the secret to a glossy sauce.</div>
+    </div>
+  </div>
+
+  <section class="ingredients">
+    <h3>Ingredients <span class="for">For 4</span></h3>
+    <ul>
+      <li>600g chicken breast (cut into strips)</li>
+      <li>250g mushrooms (sliced)</li>
+      <li>1 large onion (thinly sliced)</li>
+      <li>3 cloves garlic (minced)</li>
+      <li>1 tbsp sweet paprika</li>
+      <li>250ml chicken stock</li>
+      <li>200ml sour cream</li>
+      <li>2 tbsp butter</li>
+      <li>1 tbsp oil</li>
+      <li>Salt and pepper</li>
+    </ul>
+    <div class="sub">
+      <h4>To serve</h4>
+      <ul>
+        <li>300g egg noodles or pasta</li>
+        <li>Fresh parsley (chopped)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="directions">
+    <h3>Directions</h3>
+    <div class="step"><div class="num">1</div><div><h5>Brown the Chicken</h5><p>High heat with oil, 2 min each side — golden on the outside but not cooked through yet. Remove and set aside. This step builds flavour.</p></div></div>
+    <div class="step"><div class="num">2</div><div><h5>Soften the Onion</h5><p>Same pan, add butter on medium heat. Cook the onion 6–8 min until soft and golden. Low and slow is the key here.</p></div></div>
+    <div class="step"><div class="num">3</div><div><h5>Add Mushrooms and Garlic</h5><p>Stir in sliced mushrooms and garlic. Cook 4–5 min until the mushrooms go soft and juicy and the garlic smells amazing.</p></div></div>
+    <div class="step"><div class="num">4</div><div><h5>Dust with Paprika</h5><p>Sprinkle the paprika over everything and stir for 30 seconds — it'll go toasty and smell incredible. Don't let it burn.</p></div></div>
+    <div class="step"><div class="num">5</div><div><h5>Build the Sauce</h5><p>Pour in the chicken stock, return the browned chicken and simmer for 8 min until the sauce thickens and chicken is cooked through.</p></div></div>
+    <div class="step"><div class="num">6</div><div><h5>The Sour Cream Moment</h5><p>Take the pan OFF the heat! Stir in sour cream slowly and gently until the sauce turns glossy and smooth. No boiling allowed.</p></div></div>
+    <div class="step"><div class="num">7</div><div><h5>Cook the Noodles and Serve</h5><p>Cook noodles al dente, pile into bowls, spoon over the stroganoff and scatter fresh chopped parsley on top.</p></div></div>
+  </section>
+
+  <div class="footer">JuniorChef Saigon · International Cooking Clubs</div>
+</div>
+
+<!-- Page 2 -->
+<div class="page p2">
+  <div class="header">
+    <img src="../../project/assets/logo/juniorchef-logo.png" alt="JuniorChef Saigon">
+    <div class="eyebrow"><span class="rule"></span>Coloring Page · Page 2</div>
+  </div>
+
+  <div>
+    <div class="p2-banner">
+      <div class="label">Chicken Stroganoff</div>
+      <div class="ages">Ages 6–12</div>
+    </div>
+
+    <div class="p2-scene">
+      <img src="../../project/assets/coloring/chicken-stroganoff-coloring.png" alt="Coloring scene: Russian kitchen with chicken stroganoff and a young chef">
+    </div>
+  </div>
+
+  <div class="footer" style="position:static;margin-top:12px">Color me in! · #JuniorChefSaigon</div>
+</div>
+
+</body>
+</html>
