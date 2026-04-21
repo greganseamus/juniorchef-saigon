@@ -1,0 +1,18 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><title>Shadows</title>
+<style>
+  .row-sh { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; padding: 10px 4px 24px; }
+  .sh { background: #FFFDF7; border-radius: 14px; height: 90px; display: flex; flex-direction: column; justify-content: center; padding: 12px 14px; }
+  .sm { box-shadow: 0 1px 2px rgba(31,26,20,0.06); }
+  .md { box-shadow: 0 4px 14px rgba(31,26,20,0.08); }
+  .lg { box-shadow: 0 12px 32px rgba(31,26,20,0.12); }
+  .pop { box-shadow: 0 6px 0 rgba(31,26,20,0.9); border: 2.5px solid #1F1A14; }
+  .n { font-family: var(--font-body); font-weight: 800; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+  .v { font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted); margin-top: 4px; }
+</style></head><body>
+<div class="row-sh">
+  <div class="sh sm"><div class="n">sm</div><div class="v">subtle lift</div></div>
+  <div class="sh md"><div class="n">md</div><div class="v">cards, popovers</div></div>
+  <div class="sh lg"><div class="n">lg</div><div class="v">modals, heroes</div></div>
+  <div class="sh pop"><div class="n">pop</div><div class="v">sticker drop · worksheets</div></div>
+</div>
+</body></html>

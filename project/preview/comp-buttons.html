@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><title>Buttons</title>
+<style>
+  .btn { font-family: var(--font-display); font-weight: 600; font-size: 18px; letter-spacing: -0.01em; padding: 14px 24px; border-radius: 999px; border: 2.5px solid #1F1A14; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; }
+  .primary { background: #D82828; color: #fff; box-shadow: 0 6px 0 #1F1A14; }
+  .secondary { background: #28A090; color: #fff; box-shadow: 0 6px 0 #1F1A14; }
+  .ghost { background: #FFFDF7; color: #1F1A14; box-shadow: 0 6px 0 #1F1A14; }
+  .tiny { font-size: 13px; padding: 8px 16px; box-shadow: 0 4px 0 #1F1A14; border-radius: 999px; }
+  .row-b { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+  .col { display: flex; flex-direction: column; gap: 14px; }
+  .lab { font-family: var(--font-mono); font-size: 11px; color: var(--ink-muted); margin-top: 6px; }
+</style></head><body>
+<div class="col">
+  <div class="row-b">
+    <button class="btn primary">Let's Cook!</button>
+    <button class="btn secondary">Save Recipe</button>
+    <button class="btn ghost">Maybe Later</button>
+  </div>
+  <div class="row-b">
+    <button class="btn primary tiny">Start</button>
+    <button class="btn secondary tiny">Check</button>
+    <button class="btn ghost tiny">Back</button>
+    <button class="btn primary" disabled style="opacity:0.4;box-shadow:0 2px 0 #1F1A14">Disabled</button>
+  </div>
+  <div class="lab">Chunky pill + ink border + sticker-drop shadow · press state shifts down 2px and loses 4px of shadow</div>
+</div>
+</body></html>

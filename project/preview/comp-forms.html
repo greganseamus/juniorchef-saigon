@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><title>Form inputs</title>
+<style>
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  label { font-family: var(--font-body); font-weight: 800; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #1F1A14; }
+  input, select, textarea { font-family: var(--font-body); font-size: 16px; padding: 12px 14px; border: 2.5px solid #1F1A14; border-radius: 14px; background: #FFFDF7; color: #1F1A14; outline: none; }
+  input:focus { box-shadow: 0 0 0 3px #28A090; }
+  .check { display: flex; align-items: center; gap: 10px; font-family: var(--font-body); font-size: 15px; }
+  .box { width: 24px; height: 24px; border: 2.5px solid #1F1A14; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; }
+  .box.on { background: #28A090; color: #fff; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+</style></head><body>
+<div class="grid2">
+  <div class="field"><label>Your name</label><input value="Linh"></div>
+  <div class="field"><label>Age group</label><select><option>Ages 6–8</option><option>Ages 9–12</option></select></div>
+</div>
+<div style="margin-top:14px;display:flex;gap:22px">
+  <div class="check"><span class="box on">✓</span> Nut-free</div>
+  <div class="check"><span class="box"></span> Dairy-free</div>
+  <div class="check"><span class="box on">✓</span> Halal</div>
+</div>
+</body></html>

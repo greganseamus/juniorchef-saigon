@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Summer Berry Shortcakes · JuniorChef Saigon Recipe Sheet</title>
+<link rel="stylesheet" href="../../colors_and_type.css">
+<style>
+  html, body { margin: 0; background: #2a2620; }
+  body { display: flex; flex-direction: column; align-items: center; gap: 28px; padding: 40px 0; }
+
+  /* Page = landscape A4-ish; scales to fit viewport */
+  .page {
+    width: 1400px;
+    height: 990px;
+    background: var(--paper);
+    box-shadow: 0 12px 48px rgba(0,0,0,0.35);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ---- PAGE 1 ---- */
+  .p1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr;
+    gap: 24px 48px;
+    padding: 40px 56px 56px;
+  }
+  .header {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header img { height: 72px; }
+  .eyebrow {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--jc-red);
+    display: flex; align-items: center; gap: 14px;
+  }
+  .eyebrow .rule { width: 48px; height: 2.5px; background: var(--jc-red); }
+
+  /* Title block (left col only) — title + photo + serves */
+  .title-block {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 18px;
+  }
+  .dish-title {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 68px; line-height: 0.92;
+    letter-spacing: -0.015em; text-transform: uppercase;
+    color: var(--ink);
+    text-wrap: balance;
+    margin: 0;
+  }
+  .title-side {
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+  }
+  .dish-title .red   { color: var(--jc-red); }
+  .dish-title .teal  { color: var(--jc-teal); }
+  .dish-title .or    { color: var(--jc-orange); }
+  .dish-title .yl    { color: var(--jc-yellow); }
+  .serves {
+    font-family: var(--font-hand); color: var(--jc-red);
+    font-size: 48px; line-height: 1; transform: rotate(-4deg); white-space: nowrap;
+  }
+
+  /* Ingredients column */
+  .ingredients h3 {
+    font-family: var(--font-display); font-weight: 600;
+    font-size: 32px; text-transform: uppercase; color: var(--ink);
+    margin: 0 0 14px;
+    border-bottom: 3px solid var(--ink);
+    padding-bottom: 8px;
+    display: flex; align-items: baseline; justify-content: space-between;
+  }
+  .ingredients h3 .for {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 13px; letter-spacing: 0.14em; color: var(--jc-red);
+    background: var(--jc-red-tint); padding: 4px 10px; border-radius: 999px;
+  }
+  .ingredients ul { list-style: none; padding: 0; margin: 0; }
+  .ingredients li {
+    font-family: var(--font-body); font-size: 17px; line-height: 1.45;
+    padding: 6px 0;
+    border-bottom: 1px dashed var(--rule);
+    display: flex; gap: 10px; align-items: baseline;
+  }
+  .ingredients li::before {
+    content: ''; width: 8px; height: 8px; border-radius: 2px;
+    background: var(--jc-teal); flex-shrink: 0; transform: translateY(2px);
+  }
+  .sub { margin-top: 20px; }
+  .sub h4 {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: 18px; text-transform: uppercase; color: var(--jc-orange);
+    margin: 0 0 8px; letter-spacing: 0.04em;
+  }
+
+  /* Directions column */
+  .directions h3 {
+    font-family: var(--font-display); font-weight: 600;
+    font-size: 32px; text-transform: uppercase; color: var(--ink);
+    margin: 0 0 14px;
+    border-bottom: 3px solid var(--ink);
+    padding-bottom: 8px;
+  }
+  .step { display: grid; grid-template-columns: auto 1fr; gap: 14px; margin-bottom: 14px; }
+  .step .num {
+    width: 40px; height: 40px; border-radius: 999px; flex-shrink: 0;
+    background: var(--jc-red); color: #fff;
+    border: 2.5px solid var(--ink);
+    font-family: var(--font-display); font-weight: 700; font-size: 20px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 3px 0 var(--ink);
+  }
+  .step:nth-child(3n) .num { background: var(--jc-teal); }
+  .step:nth-child(3n+1) .num { background: var(--jc-orange); }
+  .step h5 {
+    font-family: var(--font-display); font-weight: 600;
+    font-size: 18px; text-transform: uppercase; color: var(--ink);
+    margin: 6px 0 2px; line-height: 1.1; letter-spacing: -0.005em;
+  }
+  .step p {
+    font-family: var(--font-body); font-size: 14.5px; line-height: 1.45;
+    color: var(--ink); margin: 0;
+  }
+
+  /* Hero photo now sits next to the title */
+  .hero-photo {
+    width: 170px; height: 170px;
+    border-radius: 22px;
+    overflow: hidden;
+    border: 4px solid var(--ink);
+    box-shadow: 0 8px 0 var(--ink);
+    transform: rotate(2deg);
+    flex-shrink: 0;
+  }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .serves {
+    font-family: var(--font-hand); color: var(--jc-red);
+    font-size: 36px; line-height: 1; transform: rotate(-6deg); white-space: nowrap;
+  }
+
+  /* Tip box — lives top-right */
+  .tip-box {
+    background: var(--jc-yellow); border: 2.5px solid var(--ink);
+    border-radius: 20px; padding: 16px 20px;
+    box-shadow: 0 6px 0 var(--ink);
+    display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start;
+  }
+  .tip-box .star {
+    width: 44px; height: 44px; background: var(--jc-red); color: #fff;
+    border-radius: 999px; border: 2.5px solid var(--ink);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    box-shadow: 0 3px 0 var(--ink);
+  }
+  .tip-box .head {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--jc-red-deep); margin-bottom: 4px;
+  }
+  .tip-box .body {
+    font-family: var(--font-hand); font-weight: 700;
+    font-size: 22px; line-height: 1.15; color: var(--ink);
+  }
+
+  .footer {
+    position: absolute; left: 56px; bottom: 32px;
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .page-num {
+    position: absolute; right: 56px; top: 48px;
+    font-family: var(--font-mono); font-size: 12px; color: var(--ink-muted);
+  }
+
+  /* ---- PAGE 2 ---- */
+  .p2 {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 48px 56px 56px;
+  }
+  .p2 .header { border-bottom: 3px solid var(--ink); padding-bottom: 18px; }
+  .p2-banner {
+    margin-top: 20px;
+    display: flex; align-items: baseline; justify-content: space-between;
+  }
+  .p2 .label {
+    font-family: var(--font-display); font-weight: 600;
+    font-size: 40px; text-transform: uppercase;
+    letter-spacing: -0.005em; color: var(--ink);
+  }
+  .p2 .ages {
+    font-family: var(--font-body); font-weight: 800;
+    font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+    background: var(--jc-yellow); color: var(--ink);
+    padding: 6px 14px; border-radius: 999px;
+    border: 2.5px solid var(--ink);
+  }
+  .p2-scene {
+    margin: 24px 0;
+    flex: 1;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .p2-scene img {
+    max-width: 100%; max-height: 720px;
+    border-radius: 14px;
+    border: 2px solid var(--rule);
+  }
+</style>
+</head>
+<body>
+
+<!-- Page 1 -->
+<div class="page p1">
+  <div class="header">
+    <img src="../../assets/logo/juniorchef-logo.png" alt="JuniorChef Saigon">
+    <div class="eyebrow"><span class="rule"></span>Recipe · Summer</div>
+  </div>
+  <div class="page-num">01 / 02</div>
+
+  <div class="title-block">
+    <h1 class="dish-title"><span class="red">Summer</span> <span class="teal">Berry</span> <span class="or">Short-</span><span class="yl">cake</span></h1>
+    <div class="title-side">
+      <div class="hero-photo"><img src="../../assets/photos/summer-berry-shortcakes.png" alt=""></div>
+      <div class="serves">for 4!</div>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <div class="star">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+    <div>
+      <div class="head">Chef's secret</div>
+      <div class="body">Cold ingredients are the secret to flaky shortcake — freeze your butter before you start!</div>
+    </div>
+  </div>
+
+  <section class="ingredients">
+    <h3>Ingredients <span class="for">For 4</span></h3>
+    <ul>
+      <li>200g plain flour</li>
+      <li>80g granulated sugar</li>
+      <li>10g baking powder</li>
+      <li>Pinch of baking soda</li>
+      <li>Pinch of salt</li>
+      <li>90g cold unsalted butter</li>
+      <li>90g cold plain Greek yogurt</li>
+      <li>1 egg (for egg wash)</li>
+      <li>3 tbsp cold water</li>
+      <li>200g mixed berries (strawberries, raspberries, blueberries)</li>
+      <li>200ml heavy cream</li>
+      <li>Extra sugar for the berries</li>
+    </ul>
+  </section>
+
+  <section class="directions">
+    <h3>Directions</h3>
+    <div class="step"><div class="num">1</div><div><h5>Chill Everything First</h5><p>Put the flour, butter, and yogurt in the freezer for 10 minutes. Preheat the oven to 200°C. Cold ingredients are the secret to flaky shortcake.</p></div></div>
+    <div class="step"><div class="num">2</div><div><h5>Prep the Berries</h5><p>Slice the strawberries and mix with the raspberries and blueberries. Sprinkle with a little sugar and set aside. They'll go juicy and syrupy while you work — the longer they sit, the better.</p></div></div>
+    <div class="step"><div class="num">3</div><div><h5>Make the Dough</h5><p>Mix flour, sugar, baking powder, baking soda, and salt. Add cold butter in small pieces and rub in with your fingertips until the mixture looks like coarse, lumpy sand.</p></div></div>
+    <div class="step"><div class="num">4</div><div><h5>Add the Wet Ingredients</h5><p>Whisk the yogurt, egg, and cold water. Pour into the flour mixture and stir until it just barely comes together. Lumpy is fine — do NOT overwork the dough or it turns tough.</p></div></div>
+    <div class="step"><div class="num">5</div><div><h5>Cut the Shortcakes</h5><p>Flour the table and pat the dough into a thick square — about 2.5cm high. Cut into squares or circles. Bake 12–15 minutes until puffed and golden.</p></div></div>
+    <div class="step"><div class="num">6</div><div><h5>Whip the Cream</h5><p>While the shortcakes bake, whip the cream to soft peaks — it should hold its shape but still look fluffy and light.</p></div></div>
+    <div class="step"><div class="num">7</div><div><h5>Assemble and Eat</h5><p>Split a warm shortcake open. Pile on the juicy berries, spoon over the cream, and eat straight away. Summer in a mouthful.</p></div></div>
+  </section>
+
+  <div class="footer">JuniorChef Saigon · International Cooking Clubs</div>
+</div>
+
+<!-- Page 2 -->
+<div class="page p2">
+  <div class="header">
+    <img src="../../assets/logo/juniorchef-logo.png" alt="JuniorChef Saigon">
+    <div class="eyebrow"><span class="rule"></span>Coloring Page · Page 2</div>
+  </div>
+
+  <div class="p2-banner">
+    <div class="label">Summer Berry Shortcake</div>
+    <div class="ages">Ages 6–12</div>
+  </div>
+
+  <div class="p2-scene">
+    <img src="../../assets/coloring/summer-berry-shortcakes-coloring.png" alt="Coloring scene: summer garden picnic with berries and a young chef">
+  </div>
+
+  <div class="footer" style="position:static;margin-top:12px">Color me in! · #JuniorChefSaigon</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><title>Tip callout</title>
+<style>
+  .tip { background: #FDEDC6; border: 2.5px solid #1F1A14; border-radius: 22px; padding: 18px 22px; position: relative; display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start; box-shadow: 0 6px 0 #1F1A14; }
+  .star { width: 44px; height: 44px; background: #F88000; border-radius: 999px; border: 2.5px solid #1F1A14; display: flex; align-items: center; justify-content: center; color: #fff; }
+  .head { font-family: var(--font-body); font-weight: 800; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #B35C00; }
+  .body { font-family: var(--font-hand); font-weight: 700; font-size: 24px; color: #1F1A14; line-height: 1.2; }
+
+  /* DANGER / SAFETY — brighter, louder, bigger */
+  .danger {
+    background: #FFE94A;                  /* hazard-yellow */
+    border-color: #D82828;                /* brighter than ink */
+    border-width: 4px;
+    padding: 22px 26px;
+    box-shadow: 0 8px 0 #D82828;          /* matching bright drop */
+  }
+  .danger .star {
+    width: 64px; height: 64px;
+    background: #D82828;
+    border-color: #D82828;
+    border-width: 3.5px;
+    box-shadow: 0 4px 0 #9E1A1A;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 1;
+    color: #fff;
+  }
+  .danger .head {
+    font-size: 20px;
+    letter-spacing: 0.16em;
+    color: #9E1A1A;
+  }
+  .danger .body {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 1.45;
+    color: #1F1A14;
+  }
+</style></head><body>
+<div class="tip" style="margin-bottom:14px">
+  <div class="star">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+  </div>
+  <div>
+    <div class="head">Chef's secret</div>
+    <div class="body">Enzymes in the pear break down the meat and make it melt-in-your-mouth tender.</div>
+  </div>
+</div>
+<div class="tip danger">
+  <div class="star">!</div>
+  <div>
+    <div class="head">Safety</div>
+    <div class="body">Wash your hands after touching raw chicken.</div>
+  </div>
+</div>
+</body></html>
